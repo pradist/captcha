@@ -23,12 +23,7 @@ public class Captcha {
 
     public String getOperator() {
         String[] operators = {"+", "-", "/"};
-        return operators[operator-1];
-    }
-
-    private String numberToString(int number) {
-        String[] numbers = new String[]{"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
-        return numbers[number - 1];
+        return operators[operator - 1];
     }
 
     public String getRightOperand() {
@@ -36,6 +31,11 @@ public class Captcha {
             return "" + rightOperand;
         }
         return numberToString(rightOperand);
+    }
+
+    private String numberToString(int number) {
+        String[] numbers = new String[]{"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+        return numbers[number - 1];
     }
 
     public String getCaptcha() {
