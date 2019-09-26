@@ -15,10 +15,7 @@ public class Captcha {
     }
 
     public String getLeftOperand() {
-        if (pattern == 2) {
-            return numberToString(leftOperand);
-        }
-        return "" + leftOperand;
+        return LeftOperandFactory.create(pattern, leftOperand).toString();
     }
 
     public String getOperator() {
@@ -27,15 +24,7 @@ public class Captcha {
     }
 
     public String getRightOperand() {
-        if (pattern == 2) {
-            return "" + rightOperand;
-        }
-        return numberToString(rightOperand);
-    }
-
-    private String numberToString(int number) {
-        String[] numbers = new String[]{"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
-        return numbers[number - 1];
+        return RightOperandFactory.create(pattern, rightOperand).toString();
     }
 
     public String getCaptcha() {
