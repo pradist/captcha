@@ -1,5 +1,3 @@
-package com.test;
-
 public class StringOperand implements Operand {
 
     private final int operand;

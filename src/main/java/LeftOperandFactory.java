@@ -1,5 +1,3 @@
-package com.test;
-
 public class LeftOperandFactory {
 
     public static Operand create(int pattern, int operand) {

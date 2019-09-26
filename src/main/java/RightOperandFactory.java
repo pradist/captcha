@@ -1,5 +1,3 @@
-package com.test;
-
 public class RightOperandFactory {
 
     public static Operand create(int pattern, int operand) {
